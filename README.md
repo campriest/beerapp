@@ -8,6 +8,8 @@ Create a Beer App: location bodegas within a certain mile radius that sell beer.
 
 First screenshot:
 
+![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG)
+
 
 
 
