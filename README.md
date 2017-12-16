@@ -1,5 +1,23 @@
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+*************************************************************************************************************************
 
+Start of React-Native app: 
+
+Objective:
+Create a Beer App: location bodegas within a certain mile radius that sell beer. Provde a delivery service from the bodege to the consumer. 
+
+First screenshot:
+
+![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG)
+
+
+
+
+
+
+
+
+**************************************************************************************************************************
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
 ## Table of Contents
