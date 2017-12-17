@@ -16,7 +16,7 @@ Login Screen:
 
 Sign Up Screen: 
 
-![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1422.PNG)
+![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1423.PNG)
 
 
 
