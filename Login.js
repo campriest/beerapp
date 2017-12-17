@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TextInput, Text, View} from 'react-native';
+import { StyleSheet, TextInput, Text, View, Button} from 'react-native';
 
 export default class Login extends React.Component{
 
@@ -12,6 +12,8 @@ export default class Login extends React.Component{
         }
 
   }
+
+
 
 
 
@@ -31,6 +33,12 @@ export default class Login extends React.Component{
 
             <TextInput style = {styles.password} onChangeText = {(password) =>  this.setState({password})}   value = {this.state.password}
               />
+
+            <View style = {styles.buttonStyle}  >
+
+              <Text style = {styles.buttonText}>Login</Text>
+            </View>
+
 
 
 
@@ -76,6 +84,24 @@ const styles = StyleSheet.create({
       borderRadius: 5,
       borderWidth: 1,
       borderColor: 'rgb(0,0,0)'
+
+
+    },
+    buttonStyle : {
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: 20,
+      height: 30,
+      width: 200,
+      borderRadius: 5,
+      borderWidth: 1,
+      borderColor: 'rgb(0,0, 0)',
+      backgroundColor:'rgba(50,50,50, .6)'
+
+    },
+
+    buttonText:{
+    fontSize: 26
 
 
     }

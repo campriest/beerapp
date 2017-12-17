@@ -33,6 +33,12 @@ export default class Login extends React.Component{
         <TextInput style = {styles.inputBoxEmail} onChangeText = {(email) => this.setState({email})} value = {this.state.email}
         />
 
+
+      <View style = {styles.buttonStyle}>
+
+          <Text style = {styles.buttonText}>Sign Up</Text>
+      </View>
+
       </View>
     );
   }
@@ -85,7 +91,26 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderColor: 'rgb(0,0,0)'
 
+    },
+
+    buttonStyle: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: 20,
+      height: 30,
+      width: 200,
+      borderRadius: 5,
+      borderWidth: 1,
+      borderColor: 'rgb(0,0,0)',
+      backgroundColor: 'rgba(50,50,50,.5)'
+
+    },
+
+    buttonText: {
+      fontSize: 26
     }
+
+
 
 
 });
