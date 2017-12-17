@@ -11,9 +11,11 @@ Home Screen:
 ![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG)
 
 Login Screen:
+
 ![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1422.PNG)
 
 Sign Up Screen: 
+
 ![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1422.PNG)
 
 
