@@ -4,10 +4,16 @@ import SignUp from './SignUp.js';
 
 
 import { StyleSheet, Text, View} from 'react-native';
+import {StackNavigator, } from 'react-navigation';
 
 export default class Home extends React.Component{
 
+
+
+
     render(){
+
+        const {navigate} = this.props.navigation;
 
         return(
 
@@ -23,14 +29,14 @@ export default class Home extends React.Component{
 
             <View style = {styles.buttonStyle}>
                   <View >
-                      <Text style = {styles.loginStyle}>Login</Text>
+                      <Text style = {styles.loginStyle} onPress = { () => navigate('LoginScreen')}>Login</Text>
                   </View>
                       <View style = {styles.line}>
 
                       </View>
-                        <View>
-                          <Text style = {styles.signupStyle}>Sign Up</Text>
-                        </View>
+                          <View>
+                            <Text style = {styles.signupStyle} onPress = {() => navigate('SignUpScreen')}>Sign Up</Text>
+                          </View>
               </View>
 
           </View>
