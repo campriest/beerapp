@@ -8,9 +8,9 @@ export default class Login extends React.Component{
       super();
 
       this.state = {
-          firstName: 'enter name',
-          lastName: 'enter last name',
-          email: 'email'
+          firstName: 'enter name...',
+          lastName: 'enter last name...',
+          email: 'email...'
 
       }
 
@@ -22,15 +22,15 @@ export default class Login extends React.Component{
     return (
 
       <View style = {styles.container}>
-        <Text>Sign Up</Text>
+        <Text style = {styles.title}>Sign Up</Text>
 
         <TextInput style = {styles.inputBoxFirst} onChangeText = {(firstName) => this.setState({firstName})} value = {this.state.firstName}
         />
 
-        <TextInput style = {styles.inputBoxLast} onChangeText = {(lastName) => this.setState({lastName})} value = {this.state.lastName}
+        <TextInput style = {styles.inputBoxLast}  onChangeText = {(lastName) => this.setState({lastName})} value = {this.state.lastName}
         />
 
-        <TextInput style = {styles.inputBoxEmail} onChangeText = {(email) => this.setState(email)} value = {this.state.email}
+        <TextInput style = {styles.inputBoxEmail} onChangeText = {(email) => this.setState({email})} value = {this.state.email}
         />
 
       </View>
@@ -49,9 +49,17 @@ const styles = StyleSheet.create({
 
     },
 
+    title:{
+      marginTop: -100,
+      fontSize: 60,
+      color: 'rgb(0,0,0)'
+
+    },
+
     inputBoxFirst : {
+      marginTop: 20,
       height: 20,
-      width: 120,
+      width: 200,
       borderRadius: 5,
       borderWidth: 1,
       borderColor: 'rgb(0,0,0)'
@@ -61,7 +69,7 @@ const styles = StyleSheet.create({
     inputBoxLast : {
       marginTop: 20,
       height: 20,
-      width: 120,
+      width: 200,
       borderRadius: 5,
       borderWidth: 1,
       borderColor: 'rgb(0,0,0)'
@@ -72,7 +80,7 @@ const styles = StyleSheet.create({
     inputBoxEmail: {
       marginTop: 20,
       height: 20,
-      width: 120,
+      width: 200,
       borderRadius: 5,
       borderWidth: 1,
       borderColor: 'rgb(0,0,0)'
