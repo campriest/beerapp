@@ -6,6 +6,10 @@ Start of React-Native app:
 Objective:
 Create a Beer App: location bodegas within a certain mile radius that sell beer. Provde a delivery service from the bodege to the consumer. 
 
+Future:
+
+-Connect MongoDB
+
 Home Screen:
 
 ![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG)
