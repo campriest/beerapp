@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 Start of React-Native app: 
 
 Objective:
-Create a Beer App: location bodegas within a certain mile radius that sell beer. Provde a delivery service from the bodege to the consumer. 
+Create a Beer App: location bodegas within a certain mile radius that sell beer. Provide a delivery service from the bodege to the consumer. 
 
 Future:
 
