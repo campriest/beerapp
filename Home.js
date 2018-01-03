@@ -35,6 +35,7 @@ export default class Home extends React.Component{
 
                       </View>
                           <View>
+
                             <Text style = {styles.signupStyle} onPress = {() => navigate('SignUpScreen')}>Sign Up</Text>
                           </View>
               </View>

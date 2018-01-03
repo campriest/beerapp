@@ -1,19 +1,52 @@
 import React from 'react';
-import { StyleSheet, TextInput, View, Text} from 'react-native';
+import axios from 'axios';
+import { StyleSheet, TextInput, View, Text, TouchableOpacity} from 'react-native';
+
 
 
 export default class Login extends React.Component{
 
-  constructor(){
-      super();
+  constructor(props){
+      super(props);
 
       this.state = {
           firstName: 'enter name...',
           lastName: 'enter last name...',
           email: 'email...'
 
-      }
+      };
 
+      //this.onSignUp = this.onSignUp.bind(this);
+      //console.log('works');
+  }
+
+
+  onSignUp = () => {
+    //e.preventDefault();
+
+        axios.post('/insert', querystring.stringify({
+          email: e.state.email,
+          firstName: e.state.firstName,
+          lastName: e.state.lastName
+
+        })
+
+          .then(res => {
+            console.log("axios working");
+          })
+          .catch(err => {
+            console.error(err);
+          })
+
+      console.log("button works");
+
+      // this.setState({
+      //   firstName: e.target.value,
+      //   lastName: e.target.value,
+      //   email: e.target.value
+      //
+      //
+      // });
   }
 
 
@@ -22,6 +55,7 @@ export default class Login extends React.Component{
     return (
 
       <View style = {styles.container}>
+
         <Text style = {styles.title}>Sign Up</Text>
 
         <TextInput style = {styles.inputBoxFirst} onChangeText = {(firstName) => this.setState({firstName})} value = {this.state.firstName}
@@ -34,10 +68,12 @@ export default class Login extends React.Component{
         />
 
 
-      <View style = {styles.buttonStyle}>
+      <View  style = {styles.buttonStyle}>
+        <TouchableOpacity onPress = {this.onSignUp} >
 
-          <Text style = {styles.buttonText}>Sign Up</Text>
-      </View>
+            <Text style = {styles.buttonText}>Sign Up</Text>
+        </TouchableOpacity>
+        </View>
 
       </View>
     );

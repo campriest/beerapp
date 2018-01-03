@@ -13,11 +13,6 @@ export default class Login extends React.Component{
 
   }
 
-
-
-
-
-
   render(){
 
     return (
@@ -25,6 +20,7 @@ export default class Login extends React.Component{
       <View style = {styles.container}>
 
               <Text style = {styles.login}>Login</Text>
+
 
 
 
@@ -40,7 +36,7 @@ export default class Login extends React.Component{
             </View>
 
 
-
+    
 
       </View>
 
@@ -101,7 +97,7 @@ const styles = StyleSheet.create({
     },
 
     buttonText:{
-    fontSize: 26
+      fontSize: 26
 
 
     }
