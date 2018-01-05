@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import querystring from 'querystring';
+
 import { StyleSheet, TextInput, View, Text, TouchableOpacity} from 'react-native';
 
 
@@ -21,22 +23,33 @@ export default class Login extends React.Component{
   }
 
 
-  onSignUp = () => {
-    //e.preventDefault();
+  onSignUp = (e) => {
 
-        axios.post('/insert', querystring.stringify({
-          email: e.state.email,
-          firstName: e.state.firstName,
-          lastName: e.state.lastName
+
+        axios.post('http://192.168.1.3:3000/insert', {
+
+          // firstName: e.state.firstName,
+
+
+
+          // lastName: e.state.lastName
 
         })
+        .then(function(res){
+            console.log(res);
+        })
+        .catch(function(error){
+            console.log(error);
+        })
 
-          .then(res => {
-            console.log("axios working");
-          })
-          .catch(err => {
-            console.error(err);
-          })
+        e.preventDefault();
+
+          // .then(res => {
+          //   console.log("axios working");
+          // })
+          // .catch(err => {
+          //   console.error(err);
+          // })
 
       console.log("button works");
 

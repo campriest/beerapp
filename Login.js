@@ -13,6 +13,15 @@ export default class Login extends React.Component{
 
   }
 
+
+  emailInput = () => {
+    //const emailValue
+
+    //console.log(emailValue);
+
+
+  }
+
   render(){
 
     return (
@@ -27,7 +36,7 @@ export default class Login extends React.Component{
               <TextInput style = {styles.username} onChangeText = {(username) => this.setState({username})}  value = {this.state.username}
               />
 
-            <TextInput style = {styles.password} onChangeText = {(password) =>  this.setState({password})}   value = {this.state.password}
+              <TextInput style = {styles.password} onChangeText = {(password) =>  this.setState({password})}   value = {this.state.password}
               />
 
             <View style = {styles.buttonStyle}  >
@@ -36,7 +45,7 @@ export default class Login extends React.Component{
             </View>
 
 
-    
+
 
       </View>
 
