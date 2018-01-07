@@ -6,9 +6,22 @@ Start of React-Native app:
 Objective:
 Create a Beer App: location bodegas within a certain mile radius that sell beer. Provide a delivery service from the bodege to the consumer. 
 
-Future:
+Using:
+-React-Native
+-Axios
+-Express
+-Body-parser
+-MongoDB
+-Nodemon
 
+
+Future:
+-Create backend for sign up and login
 -Connect MongoDB
+
+Current Status:
+
+Front end can make calls to back in--input can be logged to terminal server--then pushed to DB.
 
 Home Screen:
 
