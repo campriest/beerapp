@@ -2,22 +2,30 @@ var express       = require('express');
 var bodyParser    = require('body-parser');
 var assert        = require('assert');
 //var MongoClient     = require('mongoose').MongoClient;
-var user          = require('../model/User.js');
+
 const app         = express();
-var router        = express.Router();
+
 var MongoClient   = require('mongodb').MongoClient;
+var morgan        = require('morgan');
+
+var mongoose      = require('mongoose');
+var User          = require('../model/User.js');
+var config        = require('./config.js');
+var jwt           = require('jsonwebtoken');
 
 
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-
-app.use(bodyParser.json({type: 'applicaiton/json'}));
+app.set('tokenSecret', config.secret);
+//get info from posts
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json({ type: 'application/json' }));
+//logs requests to server
+app.use(morgan('dev'));
 
 //app.use('/', router);
 
 
-
+var routerSignUp        = express.Router();
+var routerLoginIn       = express.Router();
 
 
 
@@ -44,26 +52,64 @@ app.get('/', function(req, res){
 //
 // });
 
-  router.get('/', function(req, res){
+  routerSignUp.get('/', function(req, res){
       res.send('Second Page');
       console.log('start of the other side');
+      console.log(req.body);
 
   });
 
-  router.post('/', function(req,res){
+  routerSignUp.post('/', function(req,res){
 
     //res.send("works");
-    res.json(req.body);
+    //res.json(req.body);
     console.log("from the other side");
+    console.log("first name: "+ req.body.firstName);
+    console.log("last name: " + req.body.lastName);
+    console.log("email: " + req.body.email);
 
 
   });
 
-  app.use('/insert', router);
 
-  app.listen(3000,'192.168.1.3', () =>{
+  routerLoginIn.get('/', function(req, res){
+
+    res.send('Login Page');
+    console.log('Login works');
+
+
+});
+
+  routerLoginIn.post('/',function(req,res){
+
+    console.log('login page validation');
+    console.log(req.body.username)
+
+    // User.findOne({
+    //   //Fix to match right signup
+    //   name: req.body.email
+    //
+    // }, function(err, user){
+    //
+    //
+    //
+    //
+    // })
+
+
+
+  });
+
+
+
+  app.use('/insert', routerSignUp);
+  app.use('/login', routerLoginIn);
+
+  app.listen(3000,'192.168.1.2', () =>{
     console.log('route working');
   });
+
+
 
 
 

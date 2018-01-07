@@ -14,7 +14,8 @@ export default class Login extends React.Component{
       this.state = {
           firstName: 'enter name...',
           lastName: 'enter last name...',
-          email: 'email...'
+          email: 'email...',
+          password: 'password...'
 
       };
 
@@ -26,15 +27,19 @@ export default class Login extends React.Component{
   onSignUp = (e) => {
 
 
-        axios.post('http://192.168.1.3:3000/insert', {
 
-          // firstName: e.state.firstName,
+        axios.post('http://192.168.1.2:3000/insert', querystring.stringify({
+
+          firstName: this.state.firstName,
+          lastName:  this.state.lastName,
+          email:     this.state.email,
+          password:  this.state.password
 
 
 
-          // lastName: e.state.lastName
 
-        })
+
+        }))
         .then(function(res){
             console.log(res);
         })
@@ -71,13 +76,16 @@ export default class Login extends React.Component{
 
         <Text style = {styles.title}>Sign Up</Text>
 
-        <TextInput style = {styles.inputBoxFirst} onChangeText = {(firstName) => this.setState({firstName})} value = {this.state.firstName}
+      <TextInput style = {styles.inputBoxFirst} clearTextOnFocus = {true} onChangeText = {(firstName) => this.setState({firstName})} value = {this.state.firstName}
         />
 
-        <TextInput style = {styles.inputBoxLast}  onChangeText = {(lastName) => this.setState({lastName})} value = {this.state.lastName}
+      <TextInput style = {styles.inputBoxLast}  clearTextOnFocus = {true} onChangeText = {(lastName) => this.setState({lastName})} value = {this.state.lastName}
         />
 
-        <TextInput style = {styles.inputBoxEmail} onChangeText = {(email) => this.setState({email})} value = {this.state.email}
+        <TextInput style = {styles.inputBoxEmail} clearTextOnFocus = {true} onChangeText = {(email) => this.setState({email})} value = {this.state.email}
+        />
+
+      <TextInput style = {styles.inputBoxPassword} clearTextOnFocus = {true} onChangeText = {(password) => this.setState({password})} value = {this.state.password}
         />
 
 
@@ -139,6 +147,17 @@ const styles = StyleSheet.create({
       borderRadius: 5,
       borderWidth: 1,
       borderColor: 'rgb(0,0,0)'
+
+    },
+
+    inputBoxPassword: {
+      marginTop: 20,
+      height: 20,
+      width: 200,
+      borderRadius: 5,
+      borderWidth: 1,
+      borderColor: 'rgb(0,0,0)'
+
 
     },
 

@@ -1,24 +1,42 @@
 import React from 'react';
-import { StyleSheet, TextInput, Text, View, Button} from 'react-native';
+import axios from 'axios';
+import { StyleSheet, TextInput, Text, View, Button, TouchableOpacity} from 'react-native';
+import querystring from 'querystring';
+
+
 
 export default class Login extends React.Component{
 
   constructor(){
 
       super();
+
       this.state = {
           username: 'enter username',
           password: 'enter password'
         }
 
+
   }
 
 
-  emailInput = () => {
-    //const emailValue
+  logIn = (e) => {
+      axios.post('http://192.168.1.2:3000/login', querystring.stringify({
+          username: this.state.username,
+          password: this.state.password
 
-    //console.log(emailValue);
 
+      }))
+      .then(function(res){
+
+          console.log(res);
+      })
+      .catch(function(error){
+
+          console.log(error);
+      })
+
+        console.log("login button pushed");
 
   }
 
@@ -33,15 +51,16 @@ export default class Login extends React.Component{
 
 
 
-              <TextInput style = {styles.username} onChangeText = {(username) => this.setState({username})}  value = {this.state.username}
+              <TextInput style = {styles.username} clearTextOnFocus = {true} onChangeText = {(username) => this.setState({username})}  value = {this.state.username}
               />
 
-              <TextInput style = {styles.password} onChangeText = {(password) =>  this.setState({password})}   value = {this.state.password}
+              <TextInput style = {styles.password} clearTextOnFocus = {true} onChangeText = {(password) =>  this.setState({password})}   value = {this.state.password}
               />
 
             <View style = {styles.buttonStyle}  >
-
-              <Text style = {styles.buttonText}>Login</Text>
+              <TouchableOpacity onPress = {this.logIn}>
+                  <Text style = {styles.buttonText}>Login</Text>
+              </TouchableOpacity>
             </View>
 
 
