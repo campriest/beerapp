@@ -45,7 +45,11 @@ BackEnd:
 
 MongoLab: 
 
-![alt text'](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-07%20at%2012.55.01%20PM.png)
+![alt text](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-07%20at%2012.55.01%20PM.png)
+
+Post Code: 
+
+![alt text](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-07%20at%201.03.43%20PM.png)
 
 
 
