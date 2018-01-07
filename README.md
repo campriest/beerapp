@@ -8,10 +8,15 @@ Create a Beer App: location bodegas within a certain mile radius that sell beer.
 
 Using:
 -React-Native
+
 -Axios
+
 -Express
+
 -Body-parser
+
 -MongoDB
+
 -Nodemon
 
 
