@@ -27,7 +27,7 @@ Future:
 Current Status:
 
 Front end can make calls to back in--input can be logged to terminal server--then pushed to DB.
-
+UI: 
 Home Screen:
 
 ![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG)
@@ -41,6 +41,11 @@ Sign Up Screen:
 ![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1438.PNG)
 
 
+BackEnd:
+
+MongoLab: 
+
+![alt text'](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-07%20at%2012.55.01%20PM.png)
 
 
 
