@@ -30,7 +30,8 @@ Future:
 
 Current Status:
 
-Front end can make calls to back in--input can be logged to terminal server--then pushed to DB.
+Front end can make calls to back in--input can be pushed into the mongodb--using mongolab.
+
 UI: 
 Home Screen:
 
@@ -50,6 +51,9 @@ BackEnd:
 MongoLab: 
 
 ![alt text](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-07%20at%2012.55.01%20PM.png)
+
+UserSchema:
+![alt text](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-08%20at%2010.02.20%20AM.png)
 
 Post Code: 
 
