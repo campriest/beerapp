@@ -34,11 +34,11 @@ Home Screen:
 
 Login Screen:
 
-![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1437.PNG)
+<img src = "https://github.com/campriest/beerapp/blob/master/IMG_1437.PNG" width = "400" height = "600"/>
 
 Sign Up Screen: 
 
-![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1438.PNG)
+<img src = "https://github.com/campriest/beerapp/blob/master/IMG_1438.PNG" widht = "400" height = "600" />
 
 
 BackEnd:
