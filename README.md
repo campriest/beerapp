@@ -30,7 +30,7 @@ Front end can make calls to back in--input can be logged to terminal server--the
 UI: 
 Home Screen:
 
-![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG | width = "400" height = "600")
+<img src = "https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG" width = "400" height = "600"/>
 
 Login Screen:
 
