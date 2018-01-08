@@ -21,8 +21,12 @@ Using:
 
 
 Future:
--Create backend for sign up and login
--Connect MongoDB
+-Finish backend for sign up and login. 
+-Figure out json tokens.
+-Add success screen for signed up.
+-Add error message if user already exists.
+-Add Google maps. 
+-Add UI page for storing imformation.
 
 Current Status:
 
