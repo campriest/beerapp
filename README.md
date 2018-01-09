@@ -3,8 +3,12 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 Start of React-Native app: 
 
-Objective:
-Create a Beer App: location bodegas within a certain mile radius that sell beer. Provide a delivery service from the bodege to the consumer. 
+(Possible) Objective:
+1.
+Create a Beer App: locate bodegas within a certain mile radius that sell beer. Provide a delivery service from the bodege to the consumer. 
+
+2. 
+Create a social sharing app that allows you to trade beer for work/donation. Changing how 
 
 Using:
 -React-Native
@@ -21,26 +25,43 @@ Using:
 
 
 Future:
--Create backend for sign up and login
--Connect MongoDB
+-Finish backend for sign up and login. 
+-Figure out json tokens.
+-Add success screen for signed up.
+-Add error message if user already exists.
+-Add Google maps. 
+-Add UI page for storing imformation.
 
 Current Status:
 
-Front end can make calls to back in--input can be logged to terminal server--then pushed to DB.
+Front end can make calls to back in--input can be pushed into the mongodb--using mongolab.
 
+UI: 
 Home Screen:
 
-![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG)
+<img src = "https://github.com/campriest/beerapp/blob/master/IMG_1344.PNG" width = "400" height = "600"/>
 
 Login Screen:
 
-![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1437.PNG)
+<img src = "https://github.com/campriest/beerapp/blob/master/IMG_1437.PNG" width = "400" height = "600"/>
 
 Sign Up Screen: 
 
-![alt text](https://github.com/campriest/beerapp/blob/master/IMG_1438.PNG)
+<img src = "https://github.com/campriest/beerapp/blob/master/IMG_1438.PNG" widht = "500" height = "700" />
 
 
+BackEnd:
+
+MongoLab: 
+
+![alt text](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-07%20at%2012.55.01%20PM.png)
+
+UserSchema:
+![alt text](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-08%20at%2010.02.20%20AM.png)
+
+Post Code: 
+
+![alt text](https://github.com/campriest/beerapp/blob/master/Screen%20Shot%202018-01-07%20at%201.03.43%20PM.png)
 
 
 
