@@ -23,9 +23,13 @@ app.use(morgan('dev'));
 
 //app.use('/', router);
 
+//connect to database
+mongoose.connect(config.database);
+
 
 var routerSignUp        = express.Router();
 var routerLoginIn       = express.Router();
+
 
 
 
@@ -66,7 +70,23 @@ app.get('/', function(req, res){
     console.log("from the other side");
     console.log("first name: "+ req.body.firstName);
     console.log("last name: " + req.body.lastName);
+    console.log("username: " + req.body.username);
     console.log("email: " + req.body.email);
+
+    var user = new User();
+    user.firstName = req.body.firstName;
+    user.lastName  = req.body.lastName;
+    user.email     = req.body.email;
+    user.password  = req.body.password;
+    user.username  = req.body.username;
+
+    user.save(function(err){
+
+        if(err) throw err;
+
+    })
+
+
 
 
   });
@@ -74,7 +94,41 @@ app.get('/', function(req, res){
 
   routerLoginIn.get('/', function(req, res){
 
-    res.send('Login Page');
+    User.find({
+        username:req.body.username
+
+
+
+    }, function(err, user){
+      //res.json(user);
+
+
+          if(err) throw err;
+
+            if(!user){
+
+                res.json({success: failed});
+
+            }else if(user){
+                  console.log("found");
+                  if(user.password != req.body.password){
+
+                    res.json({sucess: failed});
+                  }else{
+
+
+
+                    res.json({sucess:true});
+
+                  }
+
+            }
+
+
+
+    });
+
+    //res.send('Login Page');
     console.log('Login works');
 
 
@@ -83,7 +137,7 @@ app.get('/', function(req, res){
   routerLoginIn.post('/',function(req,res){
 
     console.log('login page validation');
-    console.log(req.body.username)
+    //console.log(req.body.username)
 
     // User.findOne({
     //   //Fix to match right signup
@@ -105,7 +159,7 @@ app.get('/', function(req, res){
   app.use('/insert', routerSignUp);
   app.use('/login', routerLoginIn);
 
-  app.listen(3000,'192.168.1.2', () =>{
+  app.listen(3000,'192.168.1.5', () =>{
     console.log('route working');
   });
 

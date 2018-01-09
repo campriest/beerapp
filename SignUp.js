@@ -14,6 +14,7 @@ export default class Login extends React.Component{
       this.state = {
           firstName: 'enter name...',
           lastName: 'enter last name...',
+          username: 'enter username...',
           email: 'email...',
           password: 'password...'
 
@@ -28,12 +29,13 @@ export default class Login extends React.Component{
 
 
 
-        axios.post('http://192.168.1.2:3000/insert', querystring.stringify({
+        axios.post('http://192.168.1.5:3000/insert', querystring.stringify({
 
           firstName: this.state.firstName,
           lastName:  this.state.lastName,
           email:     this.state.email,
-          password:  this.state.password
+          password:  this.state.password,
+          username: this.state.username
 
 
 
@@ -76,11 +78,14 @@ export default class Login extends React.Component{
 
         <Text style = {styles.title}>Sign Up</Text>
 
-      <TextInput style = {styles.inputBoxFirst} clearTextOnFocus = {true} onChangeText = {(firstName) => this.setState({firstName})} value = {this.state.firstName}
+        <TextInput style = {styles.inputBoxFirst} clearTextOnFocus = {true} onChangeText = {(firstName) => this.setState({firstName})} value = {this.state.firstName}
         />
 
-      <TextInput style = {styles.inputBoxLast}  clearTextOnFocus = {true} onChangeText = {(lastName) => this.setState({lastName})} value = {this.state.lastName}
+        <TextInput style = {styles.inputBoxLast}  clearTextOnFocus = {true} onChangeText = {(lastName) => this.setState({lastName})} value = {this.state.lastName}
         />
+
+      <TextInput style = {styles.inputBoxUsername} clearTextOnFocus = {true} onChangeText = {(username) => this.setState({username})} value = {this.state.username}
+          />
 
         <TextInput style = {styles.inputBoxEmail} clearTextOnFocus = {true} onChangeText = {(email) => this.setState({email})} value = {this.state.email}
         />
@@ -151,6 +156,17 @@ const styles = StyleSheet.create({
     },
 
     inputBoxPassword: {
+      marginTop: 20,
+      height: 20,
+      width: 200,
+      borderRadius: 5,
+      borderWidth: 1,
+      borderColor: 'rgb(0,0,0)'
+
+
+    },
+
+    inputBoxUsername: {
       marginTop: 20,
       height: 20,
       width: 200,

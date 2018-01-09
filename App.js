@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './Home.js';
 import Login from './Login.js';
 import SignUp from './SignUp.js';
+import Success from './Success.js';
 
 import {StyleSheet, Text, View} from 'react-native';
 import {StackNavigator, } from 'react-navigation';
@@ -16,6 +17,11 @@ const App = StackNavigator ({
   },
   SignUpScreen: {
     screen: SignUp
+  },
+
+  SuccessScreen:{
+
+    screen: Success
   }
 
 });

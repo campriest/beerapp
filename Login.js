@@ -21,7 +21,7 @@ export default class Login extends React.Component{
 
 
   logIn = (e) => {
-      axios.post('http://192.168.1.2:3000/login', querystring.stringify({
+      axios.post('http://192.168.1.5:3000/login', querystring.stringify({
           username: this.state.username,
           password: this.state.password
 
