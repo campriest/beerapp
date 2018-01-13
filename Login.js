@@ -21,7 +21,7 @@ export default class Login extends React.Component{
 
 
   logIn = (e) => {
-      axios.post('http://192.168.1.5:3000/login', querystring.stringify({
+      axios.post('http://192.168.1.3:3000/login', querystring.stringify({
           username: this.state.username,
           password: this.state.password
 
@@ -76,10 +76,10 @@ export default class Login extends React.Component{
 const styles = StyleSheet.create({
 
     container: {
-
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: 'rgb(235, 235, 235)'
 
     },
 

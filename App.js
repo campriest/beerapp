@@ -9,6 +9,7 @@ import {StackNavigator, } from 'react-navigation';
 //import {Match, MemoryRouter as Router} from 'react-router-native';
 
 const App = StackNavigator ({
+
   HomeScreen:   {
     screen: Home
   },
@@ -18,7 +19,6 @@ const App = StackNavigator ({
   SignUpScreen: {
     screen: SignUp
   },
-
   SuccessScreen:{
 
     screen: Success

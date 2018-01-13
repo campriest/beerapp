@@ -21,6 +21,7 @@
   "dependencies": {
     "assert": "^1.4.1",
     "axios": "^0.17.1",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "expo": "^23.0.4",
     "express": "^4.16.2",
@@ -33,6 +34,8 @@
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-form-generator": "^0.9.9",
+    "react-native-hr": "^1.1.4",
+    "react-native-hr-plus": "^1.0.3",
     "react-navigation": "^1.0.0-beta.21",
     "react-redux": "^5.0.6",
     "react-router-native": "^4.2.0"

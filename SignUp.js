@@ -1,8 +1,11 @@
+import Success from './Success.js';
 import React from 'react';
 import axios from 'axios';
 import querystring from 'querystring';
 
+
 import { StyleSheet, TextInput, View, Text, TouchableOpacity} from 'react-native';
+import {StackNavigator } from 'react-navigation';
 
 
 
@@ -27,15 +30,16 @@ export default class Login extends React.Component{
 
   onSignUp = (e) => {
 
+    const {navigate} = this.props.navigation;
+    navigate('SuccessScreen');
 
-
-        axios.post('http://192.168.1.5:3000/insert', querystring.stringify({
+        axios.post('http://192.168.1.3:3000/insert', querystring.stringify({
 
           firstName: this.state.firstName,
           lastName:  this.state.lastName,
           email:     this.state.email,
           password:  this.state.password,
-          username: this.state.username
+          username:  this.state.username
 
 
 
@@ -58,6 +62,8 @@ export default class Login extends React.Component{
           //   console.error(err);
           // })
 
+
+
       console.log("button works");
 
       // this.setState({
@@ -72,36 +78,48 @@ export default class Login extends React.Component{
 
   render(){
 
+
+
     return (
 
-      <View style = {styles.container}>
+      <View>
 
-        <Text style = {styles.title}>Sign Up</Text>
+            <Text style = {styles.title}>Sign Up</Text>
 
-        <TextInput style = {styles.inputBoxFirst} clearTextOnFocus = {true} onChangeText = {(firstName) => this.setState({firstName})} value = {this.state.firstName}
-        />
+              <View style = {styles.verticalLine}></View>
 
-        <TextInput style = {styles.inputBoxLast}  clearTextOnFocus = {true} onChangeText = {(lastName) => this.setState({lastName})} value = {this.state.lastName}
-        />
+                <View style = {styles.container}>
 
-      <TextInput style = {styles.inputBoxUsername} clearTextOnFocus = {true} onChangeText = {(username) => this.setState({username})} value = {this.state.username}
-          />
 
-        <TextInput style = {styles.inputBoxEmail} clearTextOnFocus = {true} onChangeText = {(email) => this.setState({email})} value = {this.state.email}
-        />
+                  <TextInput style = {styles.inputBoxFirst} clearTextOnFocus = {true} onChangeText = {(firstName) => this.setState({firstName})} value = {this.state.firstName}
+                  />
 
-      <TextInput style = {styles.inputBoxPassword} clearTextOnFocus = {true} onChangeText = {(password) => this.setState({password})} value = {this.state.password}
-        />
+                    <TextInput style = {styles.inputBoxLast}  clearTextOnFocus = {true} onChangeText = {(lastName) => this.setState({lastName})} value = {this.state.lastName}
+                      />
+
+                        <TextInput style = {styles.inputBoxUsername} clearTextOnFocus = {true} onChangeText = {(username) => this.setState({username})} value = {this.state.username}
+                        />
+
+                          <TextInput style = {styles.inputBoxEmail} clearTextOnFocus = {true} onChangeText = {(email) => this.setState({email})} value = {this.state.email}
+                          />
+
+                              <TextInput style = {styles.inputBoxPassword} clearTextOnFocus = {true} onChangeText = {(password) => this.setState({password})} value = {this.state.password}
+                              />
 
 
       <View  style = {styles.buttonStyle}>
-        <TouchableOpacity onPress = {this.onSignUp} >
+        <TouchableOpacity onPress = {this.onSignUp}>
 
-            <Text style = {styles.buttonText}>Sign Up</Text>
+            <Text style = {styles.buttonText}>Cheers!</Text>
         </TouchableOpacity>
         </View>
 
+
+        </View>
+
       </View>
+
+
     );
   }
 }
@@ -114,65 +132,77 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: 'rgb(235, 235, 235)'
 
     },
 
     title:{
-      marginTop: -100,
-      fontSize: 60,
+      marginTop: 15,
+      marginLeft: 15,
+      fontSize: 40,
       color: 'rgb(0,0,0)'
 
     },
 
     inputBoxFirst : {
-      marginTop: 20,
+      marginTop: 550,
       height: 20,
-      width: 200,
-      borderRadius: 5,
+      width: '77%',
+      borderStyle: 'solid',
       borderWidth: 1,
-      borderColor: 'rgb(0,0,0)'
+      borderBottomColor: 'rgb(0,0,0)',
+      borderTopColor: 'rgb(235,235,235)',
+      borderLeftColor: 'rgb(235,235,235)',
+      borderRightColor: 'rgb(235,235,235)'
 
     },
 
     inputBoxLast : {
-      marginTop: 20,
+      marginTop: 40,
       height: 20,
-      width: 200,
-      borderRadius: 5,
+      width: '77%',
       borderWidth: 1,
-      borderColor: 'rgb(0,0,0)'
-
+      borderBottomColor: 'rgb(0,0,0)',
+      borderTopColor: 'rgb(235,235,235)',
+      borderLeftColor: 'rgb(235,235,235)',
+      borderRightColor: 'rgb(235,235,235)'
 
     },
 
     inputBoxEmail: {
-      marginTop: 20,
+      marginTop: 40,
       height: 20,
-      width: 200,
-      borderRadius: 5,
+      width: '77%',
       borderWidth: 1,
-      borderColor: 'rgb(0,0,0)'
+      borderBottomColor: 'rgb(0,0,0)',
+      borderTopColor: 'rgb(235,235,235)',
+      borderLeftColor: 'rgb(235,235,235)',
+      borderRightColor: 'rgb(235,235,235)'
 
     },
 
     inputBoxPassword: {
-      marginTop: 20,
+      marginTop: 40,
       height: 20,
-      width: 200,
-      borderRadius: 5,
+      width: '77%',
       borderWidth: 1,
-      borderColor: 'rgb(0,0,0)'
+      borderBottomColor: 'rgb(0,0,0)',
+      borderTopColor: 'rgb(235,235,235)',
+      borderLeftColor: 'rgb(235,235,235)',
+      borderRightColor: 'rgb(235,235,235)'
 
 
     },
 
     inputBoxUsername: {
-      marginTop: 20,
+      marginTop: 40,
       height: 20,
-      width: 200,
-      borderRadius: 5,
+      width: '77%',
       borderWidth: 1,
-      borderColor: 'rgb(0,0,0)'
+      borderBottomColor: 'rgb(0,0,0)',
+      borderTopColor: 'rgb(235,235,235)',
+      borderLeftColor: 'rgb(235,235,235)',
+      borderRightColor: 'rgb(235,235,235)'
 
 
     },
@@ -180,10 +210,9 @@ const styles = StyleSheet.create({
     buttonStyle: {
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 20,
-      height: 30,
-      width: 200,
-      borderRadius: 5,
+      marginTop: 100,
+      height: 40,
+      width: '77%',
       borderWidth: 1,
       borderColor: 'rgb(0,0,0)',
       backgroundColor: 'rgba(50,50,50,.5)'
@@ -192,6 +221,15 @@ const styles = StyleSheet.create({
 
     buttonText: {
       fontSize: 26
+    },
+
+    verticalLine: {
+      marginTop:-38,
+      marginLeft: 150,
+      height:35,
+      width:1,
+      backgroundColor: 'rgb(0,0,0)'
+
     }
 
 
