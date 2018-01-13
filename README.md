@@ -24,7 +24,8 @@ Using:
 -Nodemon
 
 
-Future:
+
+Future (01/13/18):
 -Finish backend for sign up and login. 
 -Figure out json tokens.
 -Add success screen for signed up.
@@ -47,7 +48,7 @@ Login Screen:
 
 Sign Up Screen: 
 
-<img src = "https://github.com/campriest/beerapp/blob/master/IMG_1438.PNG" widht = "500" height = "700" />
+<img src = "https://github.com/campriest/beerapp/blob/master/IMG_1806.PNG" widht = "500" height = "700" />
 
 
 BackEnd:
